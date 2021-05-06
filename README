@@ -1,12 +1,17 @@
-1. copy the data files hee
+-- Analyzing tools for the open data of "Human Activity Recognition Using Smartphones Data Set" --
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+
+1. copy the data files here
 
 the target files are as follows.
-	../uci/UCI HAR Dataset/test/subject_test.txt
-	../uci/UCI HAR Dataset/test/X_test.txt
-	../uci/UCI HAR Dataset/test/y_test.txt
-	../uci/UCI HAR Dataset/train/subject_train.txt
-	../uci/UCI HAR Dataset/train/X_train.txt
-	../uci/UCI HAR Dataset/train/y_train.txt
+	UCI HAR Dataset/test/subject_test.txt
+	UCI HAR Dataset/test/X_test.txt
+	UCI HAR Dataset/test/y_test.txt
+	UCI HAR Dataset/train/subject_train.txt
+	UCI HAR Dataset/train/X_train.txt
+	UCI HAR Dataset/train/y_train.txt
 for example
 	cp ../uci/UCI\ HAR\ Dataset/test/subject_test.txt test_subject_test.txt
 	cp ../uci/UCI\ HAR\ Dataset/test/X_test.txt test_X_test.txt
