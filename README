@@ -19,3 +19,22 @@ for example
 	cp ../uci/UCI\ HAR\ Dataset/train/subject_train.txt train_subject_test.txt
 	cp ../uci/UCI\ HAR\ Dataset/train/X_train.txt train_X_test.txt
 	cp ../uci/UCI\ HAR\ Dataset/train/y_train.txt train_y_train.txt
+
+
+
+
+
+3.k-nn
+transform acceleration data into k-nn data
+	$ python3 accel2knn.py _cutaruki_0_wo_title.csv 0 _data0.knn.unsorted.txt _data0.knn.sorted.txt
+	$ python3 accel2knn.py _cutaruki_1_wo_title.csv 1 _data1.knn.unsorted.txt _data1.knn.sorted.txt
+
+split all the data to training data and test data
+for example:
+	$ cat _data0.knn.sorted.txt _data1.knn.sorted.txt > _dataX.knn.sorted.txt
+	$ sed 1d < _dataX.knn.sorted.txt > _dataX.knn.sorted.trai.txt
+	$ head -1 _dataX.knn.sorted.txt > _dataX.knn.sorted.test.txt
+
+execute k-nn
+	$ python3 k-nn.py 5 6144 _dataX.knn.sorted.trai.txt _dataX.knn.sorted.test.txt
+

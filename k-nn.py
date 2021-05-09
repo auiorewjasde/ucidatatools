@@ -40,13 +40,11 @@ with open(testfile) as filtest:
 
 		l_vals_s = sorted(l_vals, key=lambda x:evalFn(values,x))
 
-		#print(l_vals_s)
 		formax = min( len(l_vals_s), k)
 		
 		print("accu= ",label, " : ", end="")
 		for i in range(formax):
-			lv = l_vals[i]
-			#print(lv)
+			lv = l_vals_s[i]
 			print(lv[0], " ", end="")
 		print()
 

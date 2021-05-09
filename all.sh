@@ -26,5 +26,5 @@ python3 accel2knn.py _cutaruki_1_wo_title.csv 1 _data1.knn.unsorted.txt _data1.k
 #cat _data0.knn.sorted.txt _data1.knn.sorted.txt > _dataX.knn.sorted.txt
 #sed 1d < _dataX.knn.sorted.txt > _dataX.knn.sorted.trai.txt
 #head -1 _dataX.knn.sorted.txt > _dataX.knn.sorted.test.txt
-#python3 k-nn.py 10 6144 _dataX.knn.sorted.trai.txt _dataX.knn.sorted.test.txt
+#python3 k-nn.py 5 6144 _dataX.knn.sorted.trai.txt _dataX.knn.sorted.test.txt
 
