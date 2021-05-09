@@ -2,11 +2,15 @@ import sys
 
 BLOCK_SIZE = 2048
 
+infilename = sys.argv[1]
+label = sys.argv[2]
+outfile0 = sys.argv[3]
+outfile1 = sys.argv[4]
 
-with open(sys.argv[3], "w") as filout0:
-	with open(sys.argv[4], "w") as filout1:
+with open(outfile0, "w") as filout0:
+	with open(outfile1, "w") as filout1:
 
-		with open(sys.argv[1]) as f:
+		with open(infilename) as f:
 			lines = f.readlines()
 			n_blocks = int( len(lines) / BLOCK_SIZE )
 			print("size of lines =", len(lines), " n_blocks = ", n_blocks)
