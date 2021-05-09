@@ -32,14 +32,14 @@ with open(outfile0, "w") as filout0:
 				xyzs1.sort(key=lambda x: float(x[0])**2+float(x[1])**2+float(x[2])**2)
 
 				filout0.write( label + " " )
-				cnt = 0
+				cnt = 1
 				for j in xyzs0:
 					filout0.write( str(cnt) + ":" + j + " " )
 					cnt += 1
 				filout0.write("\n")
 
 				filout1.write( label + " " )
-				cnt = 0
+				cnt = 1
 				for k in range(3):
 					for j in xyzs1:
 						filout1.write( str(cnt) + ":" + j[k] + " " )
